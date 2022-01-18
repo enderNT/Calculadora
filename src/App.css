@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+
+span{
+    padding: 0;
+    font-size: small;
+    text-align: end;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+    padding: 0;
+    font-size: small;
+
+background: rgba(22, 189, 189, 0.7);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border: 1px solid rgba(255, 255, 255, 0.33);
+cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculadora{
+background: rgba(14, 182, 104, 0.23);
+border-radius: 16px;
+box-shadow: -32px 2px 14px 0px rgba(0,0,0,0.65);
+-webkit-box-shadow: -32px 2px 14px 0px rgba(0,0,0,0.65);
+-moz-box-shadow: -32px 2px 14px 0px rgba(0,0,0,0.65);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border: 1px solid rgba(255, 255, 255, 0.33);
+
+    margin: auto;
+    margin-top: 18.5vh;
+    width: 55vw;
+    height: 55vh;
+    max-width: 740px;
+    min-width: 420px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, minmax(min-content, 1fr));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calculadora__resultado{
+    grid-column: span 4;
+    border-radius: 16px;
+    border: none;
+    text-align: end;
+    font-size: xx-large;
+    font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+#cero{
+    grid-column: span 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculadora__clear{
+    color: white;
+    background-color: black;
+    grid-column: span 3;
 }
+
+.calculadora__c{
+    color: white;
+    background-color: black;
+}
+
+.calculadora__igual{
+    color: white;
+    background-color: black;
+    grid-column: span 4;
+}
+
+#operador{
+    color: white;
+    background-color: black;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active{
+    outline: none;
+}
+
+@media(max-width: 310px) {
+
+    .calculadora{
+        width: 100vw;
+        min-width: 50px;
+    }
+
+    input{
+        padding: 0;
+        font-size: xx-small;
+    }
+    
+    button{
+        padding: 0;
+        font-size: xx-small;
+    }
+}
+
+
+
+
+
